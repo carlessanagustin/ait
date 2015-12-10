@@ -175,6 +175,8 @@ describe('Calculo descuento compra', function() {
 
 Objetivo: Especificar una prueba de integración para el controlador de Restaurantes y comprobar que filtra correctamente la lista de restaurantes en base al filtro de rating. 
 
+Documentación https://karma-runner.github.io
+
 Para comprobarlo ademas añadiremos un [mock](https://es.wikipedia.org/wiki/Objeto_simulado) que obtenga unos datos predefinidos en lugar de acceder al servidor.
 
 **Configuración de karma para la aplicación**
@@ -594,8 +596,10 @@ module.exports = steps;
 
 *  Ejecutar la prueba
 
-    $ sudo webdriver-manager start
-    /test/bdd/cucumber.js
+```
+$ sudo webdriver-manager start
+/test/bdd/cucumber.js
+```
 
 # 6. PRUEBAS EXPLORATORIAS
 
