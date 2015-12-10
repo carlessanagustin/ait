@@ -283,7 +283,7 @@ beforeEach(inject(function($controller, $httpBackend, $rootScope) {
 
 # 3. PRUEBAS DE ACEPTACIÓN
 
-Revisar https://angular.github.io/protractor/#/
+Documentación https://angular.github.io/protractor/#/
 
 ## Prueba que comprueba el título de la página
 
@@ -474,7 +474,7 @@ module.exports = steps;
 En nuestra aplicación de ejemplo los servicios están definidos con REST y JSON.
 Usaremos para las pruebas el framework *frisbyjs*.
 
-Consultar [http://frisbyjs.com](http://frisbyjs.com).
+Documentación http://frisbyjs.com
 
 ¿Cómo realizaremos la prueba de consultar el restaurante 'robatayaki' y su primer plato?
 
@@ -494,11 +494,10 @@ frisby.create('Obtener Robatayaki Hachi')
 .toss();
 ```
 
-
 # 5. PRUEBAS DE ACEPTACIÓN CON BDD "REAL"
 Objetivo: Especificar una prueba de aceptación basada en BDD (Behaviour Driven Development) con Protractor y CucumberJS
 
-[Ver CucumberJS](https://github.com/cucumber/cucumber-js)
+Documentación https://github.com/cucumber/cucumber-js
 
 ## Prueba con BDD
 
@@ -595,13 +594,8 @@ module.exports = steps;
 
 *  Ejecutar la prueba
 
-	- En una consola ejecutar
-    
-        $ sudo webdriver-manager start
-
-	- En la consola, ubicados en el directorio '/test/bdd':
-
-        cucumber.js
+    $ sudo webdriver-manager start
+    /test/bdd/cucumber.js
 
 # 6. PRUEBAS EXPLORATORIAS
 
