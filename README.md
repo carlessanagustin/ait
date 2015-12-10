@@ -5,10 +5,8 @@ NOTA: Se ha adaptado el código para que funcione con versiones superiores del s
 
 **Ejecutar la aplicación con:**
 
-	```
-	$ cd ait
-	$ ./scripts/web-server.sh
-	```
+		$ cd ait
+		$ ./scripts/web-server.sh
 
 Automáticamente se nos abrirá el navegador con la página principal de la aplicación:
 
