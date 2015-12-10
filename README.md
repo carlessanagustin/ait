@@ -5,7 +5,7 @@ NOTA: Se ha adaptado el código para que funcione con versiones superiores del s
 
 **Ejecutar la aplicación con:**
 
-	```shell
+	```
 	$ cd ait
 	$ ./scripts/web-server.sh
 	```
@@ -26,7 +26,7 @@ Queremos crear una calculadora que suma y resta. Según nos explican 3 + 7 deber
 
 * Acceder a la carpeta 
 
-	$ cd test/unit
+		$ cd test/unit
 
 * Definimos la prueba antes que el código: 'specs/calculator_spec.js'
 
@@ -54,8 +54,8 @@ Queremos crear una calculadora que suma y resta. Según nos explican 3 + 7 deber
   ```
 3. Ejecutar en la consola:
 
-	$ jasmine-node .
-	Continuo: $ jasmine-node --autotest .
+		$ jasmine-node .
+		Continuo: $ jasmine-node --autotest .
 
 Ver el resultado, ¿que falla?
 
@@ -69,7 +69,7 @@ Ver el resultado, ¿que falla?
 
 5. Volver a ejecutar la prueba.
 
-	$ jasmine-node .
+		$ jasmine-node .
 
 6. Añadir una nueva condición para que falle (specs/calculator_spec.js)
 
@@ -106,7 +106,7 @@ Ver el resultado, ¿que falla?
   ```
 8. Volver a ejecutar la prueba
 
-	$ jasmine-node .
+		$ jasmine-node .
 
 ### PRACTICA: Definir un caso unitario para el cálculo de descuentos
 
