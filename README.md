@@ -5,7 +5,10 @@ NOTA: Se ha adaptado el código para que funcione con versiones superiores del s
 
 **Ejecutar la aplicación con:**
 
-      ./scripts/web-server.sh
+	```shell
+	$ cd ait
+	$ ./scripts/web-server.sh
+	```
 
 Automáticamente se nos abrirá el navegador con la página principal de la aplicación:
 
@@ -13,16 +16,19 @@ Automáticamente se nos abrirá el navegador con la página principal de la apli
 
 Navegar durante 2-3 minutos por la aplicación para comprobar la funcionalidad existente.
 
-# PRUEBAS UNITARIAS
+# 1. PRUEBAS UNITARIAS
 
-[Información sintaxis Jasmine](http://jasmine.github.io/2.3/introduction.html)
+[Información sintaxis Jasmine](http://jasmine.github.io/2.4/introduction.html)
 
 Vamos a revisar un ejemplo básico para conocer la sintaxis del framework de testing y entender el funcionamiento de TDD. 
 
 Queremos crear una calculadora que suma y resta. Según nos explican 3 + 7 debería dar como resultado 10.
 
-1. Acceder a la carpeta 'test/unit'
-2. Definimos la prueba antes que el código: 'test/unit/specs/calculator_spec.js'
+* Acceder a la carpeta 
+
+	$ cd test/unit
+
+* Definimos la prueba antes que el código: 'specs/calculator_spec.js'
 
 **Siempre tenemos que nombrar con el sufijo 'spec.js', para que jasmine-node los ejecute**
 
@@ -48,11 +54,12 @@ Queremos crear una calculadora que suma y resta. Según nos explican 3 + 7 deber
   ```
 3. Ejecutar en la consola:
 
-		jasmine-node --autotest
+	$ jasmine-node .
+	Continuo: $ jasmine-node --autotest .
 
-	Ver el resultado que falla.
+Ver el resultado, ¿que falla?
 
-4. Realizar el mínimo código para que funcione (test/unit/calculator.js)
+4. Realizar el mínimo código para que funcione (calculator.js)
 
 	```javascript
 	exports.add = function(a,b) {
@@ -61,7 +68,10 @@ Queremos crear una calculadora que suma y resta. Según nos explican 3 + 7 deber
 	```
 
 5. Volver a ejecutar la prueba.
-6. Añadir una nueva condición para que falle
+
+	$ jasmine-node .
+
+6. Añadir una nueva condición para que falle (specs/calculator_spec.js)
 
 	  ```javascript
 	    // Pruebas unitarias de una calculadora
@@ -87,7 +97,7 @@ Queremos crear una calculadora que suma y resta. Según nos explican 3 + 7 deber
 	        });
 	      });
 	  ```
-7. Hacer la refactorización para que no falle:
+7. Hacer la refactorización para que no falle (calculator.js)
 
   ```javascript
   exports.add = function(a,b) {
@@ -95,6 +105,8 @@ Queremos crear una calculadora que suma y resta. Según nos explican 3 + 7 deber
   }
   ```
 8. Volver a ejecutar la prueba
+
+	$ jasmine-node .
 
 ### PRACTICA: Definir un caso unitario para el cálculo de descuentos
 
@@ -123,9 +135,9 @@ Fichero 'test/unit/calculator_discount.js':
 
 ---
 
-Fichero: 'calculator_discount_spec.js'
+Fichero: 'specs/calculator_discount_spec.js'
 
-
+	  ```javascript
 	 var calc = require('../calculator_discount.js')
 
 	 describe('Calculo descuento compra', function() {
@@ -152,10 +164,9 @@ Fichero: 'calculator_discount_spec.js'
 	    });
 	  });
 	});
+	  ```
 
-
-
-# PRUEBAS DE COMPONENTE
+# 2. PRUEBAS DE COMPONENTE
 
 Objetivo: Especificar una prueba de integración para el controlador de Restaurantes y comprobar que filtra correctamente la lista de restaurantes en base al filtro de rating. 
 
